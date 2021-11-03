@@ -1,0 +1,40 @@
+
+.container-home {
+	width: 100%;  
+	min-height: 100vh;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	background: -webkit-linear-gradient(to right, #804000, #d7d0b7);
+	background: linear-gradient(to right, #804000, #d7d0b7);
+}
+
+.header-nav {
+	background: -webkit-linear-gradient(to right, #804000, #d7d0b7);
+	background: linear-gradient(to right, #804000, #d7d0b7);
+}
+
+.color-red {
+	background-color: red;
+}
+
+
+.container-form-login {
+	width: 600px;
+	background: white;
+	border-radius: 25px;
+	padding: 77px 55px 53px 55px;
+	box-shadow: 25px 40px 28px 0px rgba(0, 0, 0, 0.38);
+}
+
+.container-form-sing-in {
+	width: 50%;
+	height: 70%;
+	background: white;
+	border-radius: 25px;
+	padding: 77px 55px 53px 55px;
+	box-shadow: 25px 40px 28px 0px rgba(0, 0, 0, 0.38);
+}
