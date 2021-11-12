@@ -1,3 +1,45 @@
+<?php 
+include "includes/user.php";
+include_once "includes/connectionDB.php";
+
+session_start();
+
+//Se crea el objeto de 'User'
+$user = new User();
+$error = false;
+
+// Comprobar email y password, no sean vacios
+if(!empty($_POST['email']) && !empty($_POST['password'])){
+    //Se busca el email y password usando la funcion indicada
+    if($user -> userExists($_POST['email'], $_POST['password']))
+    {
+        $email = $_POST['email'];
+        $user -> setUser($email);
+
+        //Se guardan los datos del usuario en 'SESSION"
+        $_SESSION['name'] = $user -> getNombre(). " ". $user -> getLastName();
+        $_SESSION['idUser'] = $user -> getIdUser(); 
+        $_SESSION['userType'] = $user -> getUserType();
+
+        //switch para comprobar tipo de usuario
+        switch ($_SESSION['userType']) {
+            case 1:
+                header ('location: reader/index.php');
+                break;
+            case 2:
+                header ('location: admin/index.php');
+                break;
+            default:
+                break;
+        }
+    }
+    else{
+        $error = true;
+    }
+}
+
+?>
+
 <!doctype html>
 <html>
     <head>
@@ -11,25 +53,26 @@
 
     <body> 
         <?php include "resources/header-home.php"?>
-
+        
         <div class="container-home">
             <div class="container-form-login">
-                <form>
+                <form method="post" action="login.php">
                     <div class="mb-4 text-center">
                         <h1>Login Screen</h1>
                     </div>
                     <div class="mb-3">
                         <label class="form-label"">Email address</label>
-                        <input type="email" class="form-control" placeholder="user@gmail.com">
+                        <input name="email" type="email" class="form-control" placeholder="user@gmail.com">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Password</label>
-                        <input type="password" class="form-control" placeholder="***************">
+                        <input name="password" type="password" class="form-control" placeholder="***************">
                     </div>
                     <div class="mb-2">
-                        <button type="submit" class="btn btn-primary">Login</button> 
+                        <button type="submit" class="btn btn-primary">Login</button>
                     </div>      
                     <div class="mb-3">
+                        <?php if($error){ echo '<div class="alert alert-danger" role="alert"> Incorrect Password or Email. </div>';}?> 
                         <div class="form-text">
                             <a href="recover-password.html">Forgotten password?</a>
                         </div>

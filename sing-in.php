@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
     <head>
@@ -11,42 +12,55 @@
     
     <body> 
         <?php include "resources/header-home.php"?>
+        <?php include "includes/connectionDB.php"?>
 
         <div class="container-home">
             <div class="container-form-sing-in">
-                <form>
+                <form action="includes/registration.php" method="post">
                     <div class="mb-4 text-center">
                         <h1>Registration form</h1>
                     </div>
                     <div class="mb-3">
                         <div class="input-group mb-4">
                             <span class="input-group-text">First Name</span>
-                            <input type="text" class="form-control" placeholder="Guillermo">
+                            <input name="firstName" type="text" class="form-control" placeholder="Guillermo" required>
                             <span class="input-group-text">Last Name</span>
-                            <input type="text" class="form-control" placeholder="Sierra Rivera">
+                            <input name="lastName" type="text" class="form-control" placeholder="Sierra Rivera" required>
+                            <span class="input-group-text">Gender</span>
+                            <select name="gender" type="text" class="form-select" >
+                                <option selected>Select Your Gender</option>
+                                <option value="F">Female</option>
+                                <option value="M">Male</option>
+                                <option value="O">Other</option>
+                            </select>
                         </div>
                         <div class="input-group mb-4">
                             <span class="input-group-text">Date of birth</span>
-                            <input type="date" class="form-control">
+                            <input name="birth" type="date" class="form-control" required>
                             <span class="input-group-text">CURP</span>
-                            <input type="text" class="form-control">
+                            <input name="CURP" type="text" class="form-control" required>
                         </div>
                         <div class="input-group mb-4">
                             <span class="input-group-text">Email</span>
-                            <input type="email" class="form-control" placeholder="example@gmail.com">
+                            <input name="email" type="email" class="form-control" placeholder="example@gmail.com" required>
                             <span class="input-group-text">Password</span>
-                            <input type="password" class="form-control" placeholder="************">
+                            <input name="password" type="password" class="form-control" placeholder="************" required>
                         </div>
                         <div class="input-group mb-4">
                             <span class="input-group-text">Town</span>
-                            <select class="form-select" >
-                                <option selected>Select Your Town</option>
-                                <option value="San Francisco">Celaya</option>
-                                <option value="San Francisco">Guanajuato</option>
-                                <option value="San Francisco">Cortazar</option>
+                            <select name ="town" class="form-select" >
+                                <option >Select Your Town</option>
+                                <?php
+                                $r = "SELECT * FROM town";
+                                $query = mysqli_query($connection,$r);
+
+                                while ($values = mysqli_fetch_array($query)) {
+                                    echo '<option value= "'.$values['IdTown'].'" >'.$values['TownName'].'</option>';
+                                }
+                                ?>
                             </select>
                             <span class="input-group-text">Address</span>
-                            <input type="text" class="form-control">
+                            <input name="address" type="text" class="form-control" required>
                         </div>
                         <div class="input-group mb-2 form-text">
                             <p class="text-danger">All Fields Are Required*</p>
