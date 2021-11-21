@@ -32,7 +32,7 @@
                         <p>We will send you a new password to your associated email.</p>
                     </div >
                     <div class="mb-1 form-text">
-                        <a href="index.html">Long in</a>
+                        <a href="index.php">Long in</a>
                     </div >
                 </form>
             </div>

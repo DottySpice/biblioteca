@@ -24,10 +24,10 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
         //switch para comprobar tipo de usuario
         switch ($_SESSION['userType']) {
             case 1:
-                header ('location: reader/index.php');
+                header ('location: reader/home.php');
                 break;
             case 2:
-                header ('location: admin/index.php');
+                header ('location: admin/home.php');
                 break;
             default:
                 break;
@@ -52,10 +52,12 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
     </head>
 
     <body> 
+        
         <?php include "resources/header-home.php"?>
         
         <div class="container-home">
             <div class="container-form-login">
+                <!--  Formulario para inicio de sesion-->
                 <form method="post" action="login.php">
                     <div class="mb-4 text-center">
                         <h1>Login Screen</h1>
@@ -74,12 +76,12 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
                     <div class="mb-3">
                         <?php if($error){ echo '<div class="alert alert-danger" role="alert"> Incorrect Password or Email. </div>';}?> 
                         <div class="form-text">
-                            <a href="recover-password.html">Forgotten password?</a>
+                            <a href="recover-password.php">Forgotten password?</a>
                         </div>
                     </div >
                     <div class="mb-3">
                         <div class="form-text">
-                            <a href="sing-in.html"> Not yet sing in?</a>
+                            <a href="sing-in.php"> Not yet sing in?</a>
                         </div>
                     </div>
                 </form>

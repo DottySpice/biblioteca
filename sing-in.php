@@ -16,6 +16,7 @@
 
         <div class="container-home">
             <div class="container-form-sing-in">
+                <!-- Formulario para regisrar un nuevo usuario -->
                 <form action="includes/registration.php" method="post">
                     <div class="mb-4 text-center">
                         <h1>Registration form</h1>
@@ -67,9 +68,25 @@
                         </div>
                         <div class="mb-3 form-text row">
                             <button type="submit" class="btn btn-primary">Sign In</button>
-                        </div >
+                        </div>
+                        <!-- Div para mostrar mensajes -->
+                        <div class="mb-1">
+                        <?php
+                            if(isset ($_GET['m']))
+                            {
+                                switch($_GET['m']){
+                                    case 1: echo '<div class="alert alert-success" role="alert"> Successful registration, please login </div>';
+                                    break;
+                                    case 2: echo '<div class="alert alert-danger" role="alert"> Oops, there was an error please try again later </div>';
+                                    break;
+                                    case 3: echo '<div class="alert alert-danger" role="alert"> Oops, email already registered </div>';
+                                    break;
+                                } 
+                            }
+                        ?>
+                        </div>
                         <div class="mb-3">
-                            <a href="index.html">Long in</a>
+                            <a href="index.php">Long in</a>
                         </div>
                     </div>          
                 </form>

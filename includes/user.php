@@ -1,12 +1,11 @@
 <?php
-
 class User {
-    
+
     var $name;
     var $lastName;
     var $idUser;
     var $userType;
-
+    
     //Funcion para comprobar si el usuario existe, regresa un valor booleano
     public function userExists($email, $password){
         include "connectionDB.php";
@@ -46,5 +45,4 @@ class User {
     public function getIdUser(){return $this -> idUser; }
     public function getUserType(){return $this -> userType; }
 }
-
 ?>
