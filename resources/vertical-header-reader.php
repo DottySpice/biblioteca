@@ -23,21 +23,15 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-dark font-italic <?=echoVerticalHeaderSelect("awaiting-requests")?>"  href="awaiting-requests.php" >
-                <i class="fas fa-list mr-3 text-primary fa-fw"></i>
-                Awaiting requestss
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark font-italic <?=echoVerticalHeaderSelect("info-request")?>"  href="info-request.php" >
-                <i class="fas fa-info mr-3 text-primary fa-fw"></i>
-                Info Request
-            </a>
-        </li>
-        <li class="nav-item">
             <a class="nav-link text-dark font-italic <?=echoVerticalHeaderSelect("list-books")?>"  href="list-books.php" >
                 <i class="fas fa-book mr-3 text-primary fa-fw"></i>
                 List Of Books
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark font-italic <?=echoVerticalHeaderSelect("info-request-reader")?>"  href="info-request-reader.php" >
+                <i class="fas fa-info mr-3 text-primary fa-fw"></i>
+                Info of Requests
             </a>
         </li>
         <p class="text-gray font-weight-bold text-uppercase px-3 small pb-2 mb-0">Options</p>

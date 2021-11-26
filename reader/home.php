@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include "../resources/access-deniedA.php";
+include "../resources/access-deniedR.php";
 ?>
 
 
@@ -9,14 +9,14 @@ include "../resources/access-deniedA.php";
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Home Admin</title>
+        <title>Home Reader</title>
 
         <link rel="stylesheet" href="../css/styles-nav-bar.css" type="text/css">
         <link rel="stylesheet" href="../css/bootstrap.css" type="text/css">    
     </head>
 
     <body class="home">
-        <?php include "../resources/vertical-header.php"?> 
+        <?php include "../resources/vertical-header-reader.php"?> 
 
         <div class="container">
             <div class="m-50 vh-100 row justify-content-center align-items-center">

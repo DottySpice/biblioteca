@@ -1,9 +1,6 @@
 <?php 
-
 session_start();
-
 include "../resources/access-deniedR.php";
-
 ?>
 
 <!doctype html>
