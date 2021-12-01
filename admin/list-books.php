@@ -28,7 +28,7 @@ include "../resources/access-deniedA.php";
                 <div class="col">
                     <h4 class="mb-4"> Add New Book </h4> 
                     <!-- Formulario para agregar nuevo libro-->
-                    <form method="post" action="../includes/book.php">
+                    <form id="formAddBook" method="post" action="../includes/book.php">
                         <div class="mb-3">
                             <label class="form-label"">ISBN</label>
                             <input name="isbn"  class="form-control" placeholder="">
@@ -58,7 +58,7 @@ include "../resources/access-deniedA.php";
                             <input name="numberOfPages" class="form-control" placeholder="">
                         </div>
                         <div class="row">
-                            <button type="submit" name="addBook" class="btn btn-primary">Add Book</button>
+                            <button onclick="return addBookJS()" name="addBook" class="btn btn-primary">Add Book</button>
                         </div>
                         <div class="mb-2">
                         <?php
@@ -117,7 +117,9 @@ include "../resources/access-deniedA.php";
                     </div>
                 </div> 
             </div> 
-        </div>    
+        </div>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../includes/js/alerts.js" ></script>     
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>

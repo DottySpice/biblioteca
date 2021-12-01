@@ -53,20 +53,19 @@ include "../resources/access-deniedA.php";
                                     <?php 
                                     switch ($renglon['Status']) {
                                         case '0':
-                                            echo 'Waiting for Confirmation';
+                                            echo '<p class="bg-primary text-white">Waiting for Confirmation </p>';
                                             break;
                                         case '1':
-                                            echo 'Loan Confirmed';
+                                            echo '<p class="bg-info text-white"> Loan Confirmed </p>';
                                             break;
-                                                
                                         case '2':
-                                            echo 'Loan Rejected';
+                                            echo '<p class="bg-danger text-white">Loan Rejected </p>';
                                             break;
                                         case '3':
-                                            echo 'Loan Returned  On time';
+                                            echo '<p class="bg-success text-white">Loan Returned  On time </p>';
                                             break;
                                         case '4':
-                                            echo 'Loan Returned Out Of time';
+                                            echo '<p class="bg-warning ">Loan Returned Out Of time </p>';
                                             break;     
                                     }
                                     ?>

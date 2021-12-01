@@ -51,26 +51,25 @@ include "../resources/access-deniedR.php";
                                     <td><?php echo $renglon['LoanDate']; ?></td>
                                     <td><?php echo $renglon['DeadLineDate']; ?></td>
                                     <td><?php echo $renglon['ReturnDate']; ?></td>
-                                    <td>
+                                    <td >
                                     <?php 
                                     $status= false;
                                     switch ($renglon['Status']) {
                                         case '0':
-                                            echo 'Waiting for Confirmation';
+                                            echo '<p class="bg-primary text-white">Waiting for Confirmation </p>';
                                             break;
                                         case '1':
-                                            echo 'Loan Confirmed';
+                                            echo '<p class="bg-info text-white"> Loan Confirmed </p>';
                                             $status = true;
                                             break;
-                                                
                                         case '2':
-                                            echo 'Loan Rejected';
+                                            echo '<p class="bg-danger text-white">Loan Rejected </p>';
                                             break;
                                         case '3':
-                                            echo 'Loan Returned  On time';
+                                            echo '<p class="bg-success text-white">Loan Returned  On time </p>';
                                             break;
                                         case '4':
-                                            echo 'Loan Returned Out Of time';
+                                            echo '<p class="bg-warning ">Loan Returned Out Of time </p>';
                                             break;     
                                     }
                                     ?>
@@ -94,6 +93,8 @@ include "../resources/access-deniedR.php";
                 </div> 
             </div> 
         </div>  
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../includes/js/alerts.js" ></script>  
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>

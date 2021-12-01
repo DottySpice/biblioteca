@@ -23,6 +23,14 @@
     background-color: #da8c5b
 }
 
+
+.container-form-edit-account {
+	background: white;
+	border-radius: 25px;
+	padding: 77px 55px 53px 55px;
+	box-shadow: 25px 40px 28px 0px rgba(0, 0, 0, 0.38);
+}
+
 .table-border{ 
     border: 5px solid #ddd;
     border-collapse: separate;

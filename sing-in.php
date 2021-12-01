@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
     <head>
@@ -67,7 +66,7 @@
                             <p class="text-danger">All Fields Are Required*</p>
                         </div>
                         <div class="mb-3 form-text row">
-                            <button type="submit" class="btn btn-primary">Sign In</button>
+                            <button type="submit" class="btn btn-primary" name="singUser">Sign In</button>
                         </div>
                         <!-- Div para mostrar mensajes -->
                         <div class="mb-1">

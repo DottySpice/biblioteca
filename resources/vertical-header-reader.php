@@ -34,11 +34,20 @@
                 Info of Requests
             </a>
         </li>
+        
         <p class="text-gray font-weight-bold text-uppercase px-3 small pb-2 mb-0">Options</p>
         <li class="nav-item">
-            <a href="#" class="nav-link text-dark font-italic">
-                 <i class="fas fa-user mr-3 text-primary fa-fw"></i>
+            <a class="nav-link text-dark font-italic <?=echoVerticalHeaderSelect("edit-account")?>"  href="edit-account.php" >
+                <i class="fas fa-user mr-3 text-primary fa-fw"></i>
                 Account
+            </a>
+        </li>
+
+        <p class="text-gray font-weight-bold text-uppercase px-3 small pb-2 mb-0">Session</p>
+        <li class="nav-item">
+            <a class="nav-link text-dark font-italic" href="../index.php" >
+                <i class="fas fa-user mr-3 text-primary fa-fw"></i>
+                Log Out
             </a>
         </li>
     </ul>

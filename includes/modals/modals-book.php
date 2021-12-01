@@ -8,14 +8,14 @@
             </div>
             <div class="modal-body">
                 Do you really want to delete the book titled
-                <h1 class="modal-title">
+                <h1 id="bookName" class="modal-title">
                     <?php echo $renglon['BookName']; ?> ?
                 </h1>
             </div>
             <div class="modal-footer">
-                <form method="post" action="../includes/book.php?isbn=<?php echo $renglon['ISBN']; ?>">
+                <form id="formDeleteBook" method="post" action="../includes/book.php?isbn=<?php echo $renglon['ISBN']; ?>">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-danger " data-dismiss="modal" name="deleteBook" >Delete It!</button>
+                    <button onclick="return deleteBookJS()" class="btn btn-danger " data-dismiss="modal" name="deleteBook" >Delete It!</button>
                 </form>
             </div>
         </div>
@@ -30,7 +30,7 @@
                 <h5 class="modal-title" id="exampleModalLabel">Edit Book</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form method="post" action="../includes/book.php?isbn=<?php echo $renglon['ISBN']; ?>">
+            <form id="formModifyBook" method="post" action="../includes/book.php?isbn=<?php echo $renglon['ISBN']; ?>">
                 <div class="modal-body">
                         <div class="mb-3">
                             <label class="form-label"">ISBN</label>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary " data-dismiss="modal" name="updateBook" >Update Book</button>
+                    <button onclick="return modifyBookJS()" class="btn btn-primary " data-dismiss="modal" name="updateBook" >Update Book</button>
                 </div>
             </form> 
         </div>
