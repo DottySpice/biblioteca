@@ -35,7 +35,7 @@ include "../resources/access-deniedA.php";
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Book Name</label>
-                            <input name="bookName" class="form-control" placeholder="">
+                            <input id="bookName" name="bookName" class="form-control" placeholder="">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Topic</label>

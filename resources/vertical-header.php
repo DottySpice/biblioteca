@@ -6,8 +6,9 @@
 
 <div class="vertical-nav bg-white" id="sidebar">
     <div class="py-4 px-3 mb-4 bg-light header-nav">
-        <div class="d-flex align-items-center"><img src="https://bootstrapious.com/i/snippets/sn-v-nav/avatar.png"  width="65" class="mr-3 rounded-circle img-thumbnail">
-            <div>
+        <div class="d-flex align-items-center">
+            <i class="fas fa-2x fa-border fa-user-tie"></i>
+            <div >
                 <h4 class="m-0 user-text"><?php echo $_SESSION['name']; ?></h4>
                 <p class="font-weight-light mb-0 home-text"><?php if($_SESSION['userType'] == 2){ echo "Admin";}else{echo "User";}?></p>
             </div>
@@ -25,7 +26,7 @@
         <li class="nav-item">
             <a class="nav-link text-dark font-italic <?=echoVerticalHeaderSelect("awaiting-requests")?>"  href="awaiting-requests.php" >
                 <i class="fas fa-list mr-3 text-primary fa-fw"></i>
-                Awaiting requestss
+                Awaiting requests
             </a>
         </li>
         <li class="nav-item">

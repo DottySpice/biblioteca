@@ -34,11 +34,11 @@
                 <div class="modal-body">
                         <div class="mb-3">
                             <label class="form-label"">ISBN</label>
-                            <input name="isbn"  class="form-control" value="<?php echo $renglon['ISBN']; ?>" disabled>
+                            <input id="isbn" name="isbn"  class="form-control" value="<?php echo $renglon['ISBN']; ?>" disabled>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Edit Book Name</label>
-                            <input name="bookName" class="form-control" value="<?php echo $renglon['BookName']; ?>">
+                            <input id="bookName" name="bookName" class="form-control" value="<?php echo $renglon['BookName']; ?>">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Edit Topic</label>

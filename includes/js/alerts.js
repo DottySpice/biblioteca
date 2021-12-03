@@ -64,11 +64,11 @@ function confirmLoanJS() {
 
 //Alerta para confirmar add de libro
 function addBookJS() {
-    var bookName =  document.getElementById('bookName');
+    var bookName =  document.getElementById('bookName').innerHTML;
     var formAddBook = document.getElementById('formAddBook');
     formAddBook.addEventListener('submit', function name(evt) {
         Swal.fire({
-            title: "Add the Book"+bookName+"?",
+            title: "Add the Book "+bookName+"?",
             showCancelButton: true,
             confirmButtonText: 'Add it!',
           }).then((result) => {
